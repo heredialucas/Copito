@@ -2,8 +2,7 @@ import React from "react";
 import "./Notes.css";
 import { Note } from "./Note";
 import { useState } from "react";
-import  {Button} from 'react-bootstrap';
-
+import { Button } from "react-bootstrap";
 
 const Notes = () => {
   const [note, setNote] = useState([]);
@@ -18,17 +17,20 @@ const Notes = () => {
     setNewText(event.target.value);
   };
 
-  const handleClick = (event) => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
     const noteToAddToState = {
       id: note.length + 1,
       nombre: newName,
       texto: newText,
     }
+    if ( newName !== '' && newText !== '' ) {
+      
       console.log(noteToAddToState);
       setNote(note.concat(noteToAddToState));
       setNewName("");
       setNewText("");
-    
+    }
   };
 
   return (
@@ -38,7 +40,7 @@ const Notes = () => {
           <Note key={note.id} {...note} />
         ))}
       </ol>
-      <div className="AppForm">
+      <form onSubmit={handleSubmit} className="AppForm">
         <label htmlFor="nombre">Nombre</label>
         <input
           onChange={handleChangeName}
@@ -55,8 +57,13 @@ const Notes = () => {
           name="texto"
         ></input>
         <br />
-        <Button className="AppButton" variant="outline-warning" onClick={handleClick}>Crear</Button>
-      </div>
+        <button
+          className="AppButton"
+          variant="outline-warning"
+        >
+          Crear
+        </button>
+      </form>
     </div>
   );
 };

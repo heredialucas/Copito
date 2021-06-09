@@ -1,0 +1,14 @@
+.AppNotas {
+    border: 3px solid white;
+    width: 300px;
+    height: 500px;
+    word-wrap: break-word;
+    overflow: auto;
+}
+.AppOl {
+    margin: 0;
+}
+
+.AppTexto {
+    border: 2px solid white;
+}

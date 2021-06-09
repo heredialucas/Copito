@@ -2,6 +2,8 @@ import React from "react";
 import "./Notes.css";
 import { Note } from "./Note";
 import { useState } from "react";
+import  {Button} from 'react-bootstrap';
+
 
 const Notes = () => {
   const [note, setNote] = useState([]);
@@ -30,13 +32,13 @@ const Notes = () => {
   };
 
   return (
-    <div>
+    <div className="AppContainer">
       <ol className="AppNotas">
         {note.map((note) => (
           <Note key={note.id} {...note} />
         ))}
       </ol>
-      <div>
+      <div className="AppForm">
         <label htmlFor="nombre">Nombre</label>
         <input
           onChange={handleChangeName}
@@ -53,7 +55,7 @@ const Notes = () => {
           name="texto"
         ></input>
         <br />
-        <button onClick={handleClick}>Crear</button>
+        <Button className="AppButton" variant="outline-warning" onClick={handleClick}>Crear</Button>
       </div>
     </div>
   );

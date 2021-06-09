@@ -1,14 +1,23 @@
+.AppContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
 .AppNotas {
     border: 3px solid white;
-    width: 300px;
-    height: 500px;
+    border-radius: 5%;
+    width: 500px;
+    height: 300px;
     word-wrap: break-word;
     overflow: auto;
 }
-.AppOl {
-    margin: 0;
+.AppForm {
+    display: inline-flex;
+    flex-direction: column;
+
 }
 
-.AppTexto {
-    border: 2px solid white;
+.AppButton {
+    margin-bottom: 50px;
 }

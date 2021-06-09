@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ListaReact/static/css/main.437194fd.chunk.css",
+    "main.js": "/ListaReact/static/js/main.a2c26145.chunk.js",
+    "main.js.map": "/ListaReact/static/js/main.a2c26145.chunk.js.map",
+    "runtime-main.js": "/ListaReact/static/js/runtime-main.7a3ba1f2.js",
+    "runtime-main.js.map": "/ListaReact/static/js/runtime-main.7a3ba1f2.js.map",
+    "static/js/2.073854ae.chunk.js": "/ListaReact/static/js/2.073854ae.chunk.js",
+    "static/js/2.073854ae.chunk.js.map": "/ListaReact/static/js/2.073854ae.chunk.js.map",
+    "static/js/3.d983d4d6.chunk.js": "/ListaReact/static/js/3.d983d4d6.chunk.js",
+    "static/js/3.d983d4d6.chunk.js.map": "/ListaReact/static/js/3.d983d4d6.chunk.js.map",
+    "index.html": "/ListaReact/index.html",
+    "static/css/main.437194fd.chunk.css.map": "/ListaReact/static/css/main.437194fd.chunk.css.map",
+    "static/js/2.073854ae.chunk.js.LICENSE.txt": "/ListaReact/static/js/2.073854ae.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7a3ba1f2.js",
+    "static/js/2.073854ae.chunk.js",
+    "static/css/main.437194fd.chunk.css",
+    "static/js/main.a2c26145.chunk.js"
+  ]
+}

@@ -1,68 +1,79 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Notes.css";
 import { Note } from "./Note";
 import { useState } from "react";
-import { Button } from "react-bootstrap";
 
-const Notes = () => {
+const Notes = ({ notas }) => {
   const [note, setNote] = useState([]);
-  const [newName, setNewName] = useState("");
-  const [newText, setNewText] = useState("");
+  const [state, setState] = useState({
+    nombre: "",
+    texto: "",
+  });
 
-  const handleChangeName = (event) => {
-    setNewName(event.target.value);
-  };
+  useEffect(() => {
+    window.localStorage.setItem("notas", JSON.stringify(note));
+  }, [note]);
 
-  const handleChangeText = (event) => {
-    setNewText(event.target.value);
+  useEffect(() => {
+    if (notas !== null) {
+      setNote(notas);
+    }
+  }, [notas])
+  const handleChangeState = (event) => {
+    setState({
+      ...state,
+      [event.target.name]: event.target.value,
+    });
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const noteToAddToState = {
       id: note.length + 1,
-      nombre: newName,
-      texto: newText,
-    }
-    if ( newName !== '' && newText !== '' ) {
-      
-      console.log(noteToAddToState);
+      nombre: state.nombre,
+      texto: state.texto,
+    };
+    if (state.nombre === "" || state.texto === "") {
+      alert('Es necesario rellenar los campos "Nombre" y "Texto"');
+    } else {
       setNote(note.concat(noteToAddToState));
-      setNewName("");
-      setNewText("");
+      setState({
+        nombre: "",
+        texto: "",
+      });
     }
   };
+
+  function onClose(id){
+    const notas = note.filter(note => note.id !== id)
+    setNote(notas)
+  }
 
   return (
     <div className="AppContainer">
       <ol className="AppNotas">
         {note.map((note) => (
-          <Note key={note.id} {...note} />
+          <Note key={note.id} onClose={onClose} {...note} />
         ))}
       </ol>
       <form onSubmit={handleSubmit} className="AppForm">
         <label htmlFor="nombre">Nombre</label>
         <input
-          onChange={handleChangeName}
-          value={newName}
+          onChange={handleChangeState}
           type="text"
           name="nombre"
+          value={state.nombre}
         ></input>
         <br />
         <label htmlFor="texto">Texto</label>
         <input
-          onChange={handleChangeText}
-          value={newText}
+          onChange={handleChangeState}
           type="text"
           name="texto"
+          value={state.texto}
         ></input>
         <br />
-        <button
-          className="AppButton"
-          variant="outline-warning"
-        >
-          Crear
-        </button>
+        <button className="AppButton">Crear</button>
       </form>
     </div>
   );

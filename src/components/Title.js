@@ -1,7 +1,12 @@
-import React from 'react'
+import React from "react";
+import "./Title.css";
 
 function Titulo(props) {
-    return <h1>{props.message}</h1>
+  return (
+    <div className="divTitulo">
+      <h1 className="titulo">Libro de tareas :</h1>
+    </div>
+  );
 }
 
-export default Titulo
+export default Titulo;

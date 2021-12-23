@@ -1,8 +1,17 @@
 .divTitulo{
     width: 90%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
 }
 .titulo{
+    color: aliceblue;
     padding: 15px;
+    font-size: 50px;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 800px) {
+    .titulo{
+        font-size: 30px;
+    }
 }

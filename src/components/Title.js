@@ -4,7 +4,7 @@ import "./Title.css";
 function Titulo(props) {
   return (
     <div className="divTitulo">
-      <h1 className="titulo">Libro de tareas :</h1>
+      <h1 className="titulo">Agenda de Notas</h1>
     </div>
   );
 }

@@ -57,21 +57,24 @@ const Notes = ({ notas }) => {
         ))}
       </ol>
       <form onSubmit={handleSubmit} className="AppForm">
-        <label htmlFor="nombre">Nombre</label>
+        <label className="label" htmlFor="nombre">Nombre</label>
         <input
           onChange={handleChangeState}
           type="text"
           name="nombre"
           value={state.nombre}
+          className="input"
         ></input>
         <br />
-        <label htmlFor="texto">Texto</label>
-        <input
+        <label className="label" htmlFor="texto">Texto</label>
+          <textarea
+          className="input-text"
           onChange={handleChangeState}
-          type="text"
+          type="textarea"
           name="texto"
           value={state.texto}
-        ></input>
+          >
+          </textarea>
         <br />
         <button className="AppButton">Crear</button>
       </form>

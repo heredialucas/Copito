@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/ListaReact/static/css/main.8aeb1532.chunk.css",
-    "main.js": "/ListaReact/static/js/main.f0932e15.chunk.js",
-    "main.js.map": "/ListaReact/static/js/main.f0932e15.chunk.js.map",
+    "main.css": "/ListaReact/static/css/main.f406caf2.chunk.css",
+    "main.js": "/ListaReact/static/js/main.9377e4e1.chunk.js",
+    "main.js.map": "/ListaReact/static/js/main.9377e4e1.chunk.js.map",
     "runtime-main.js": "/ListaReact/static/js/runtime-main.f8e17c2a.js",
     "runtime-main.js.map": "/ListaReact/static/js/runtime-main.f8e17c2a.js.map",
     "static/css/2.61b4cb56.chunk.css": "/ListaReact/static/css/2.61b4cb56.chunk.css",
@@ -12,14 +12,14 @@
     "static/js/3.1fcd0a5d.chunk.js.map": "/ListaReact/static/js/3.1fcd0a5d.chunk.js.map",
     "index.html": "/ListaReact/index.html",
     "static/css/2.61b4cb56.chunk.css.map": "/ListaReact/static/css/2.61b4cb56.chunk.css.map",
-    "static/css/main.8aeb1532.chunk.css.map": "/ListaReact/static/css/main.8aeb1532.chunk.css.map",
+    "static/css/main.f406caf2.chunk.css.map": "/ListaReact/static/css/main.f406caf2.chunk.css.map",
     "static/js/2.1a829087.chunk.js.LICENSE.txt": "/ListaReact/static/js/2.1a829087.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f8e17c2a.js",
     "static/css/2.61b4cb56.chunk.css",
     "static/js/2.1a829087.chunk.js",
-    "static/css/main.8aeb1532.chunk.css",
-    "static/js/main.f0932e15.chunk.js"
+    "static/css/main.f406caf2.chunk.css",
+    "static/js/main.9377e4e1.chunk.js"
   ]
 }

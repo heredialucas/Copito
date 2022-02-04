@@ -64,6 +64,7 @@ const Notes = ({ notas }) => {
           name="nombre"
           value={state.nombre}
           className="input"
+          placeholder="Nombre de Nota"
         ></input>
         <br />
         <label className="label" htmlFor="texto">Texto</label>
@@ -73,6 +74,7 @@ const Notes = ({ notas }) => {
           type="textarea"
           name="texto"
           value={state.texto}
+          placeholder="Descripción de Nota"
           >
           </textarea>
         <br />
